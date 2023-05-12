@@ -18,10 +18,6 @@ O "IGS Employee Manager" é um aplicativo web desenvolvido em Django para gerenc
         python3 -m venv venv
         source venv/bin/activate
     ```
-3. Instale dependencias:
-    ```bash
-        pip install -r requirements.txt
-    ```
 4. Aplique as migrações do banco de dados:
     ```bash
         python manage.py migrate
