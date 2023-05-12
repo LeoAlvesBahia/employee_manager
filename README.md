@@ -43,7 +43,7 @@ API:
         Método: POST
         Endpoint: /api/employees/
         Corpo da Requisição: JSON contendo os dados do colaborador
-        Exemplo de cURL: curl -X POST -H "Content-Type: application/json" -d '{"name": "John Doe", "email": "johndoe@example.com", "department": "Department A"}' http://localhost:8000/api/employees/
+        Exemplo de cURL: curl -X POST -H "Content-Type: application/json" -d '{"name": "John Doe", "email": "johndoe@example.com", "department": "1"}' http://localhost:8000/api/employees/
 
     Remover colaborador por ID:
         Método: DELETE
