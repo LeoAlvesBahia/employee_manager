@@ -49,7 +49,7 @@ API:
         Método: DELETE
         Endpoint: /api/employees/
         Corpo da Requisição: JSON contendo o ID do colaborador a ser removido
-        Exemplo de cURL: curl -X DELETE http://localhost:8000/api/employees/{employee_id}/
+        Exemplo de cURL: curl -X DELETE -H "Content-Type: application/json" -d '{"id": 3}' http://localhost:8000/api/employees/
 
     Listar departamentos:
         Método: GET
