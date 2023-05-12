@@ -62,10 +62,10 @@ API:
         Corpo da Requisição: JSON contendo os dados do departamento
         Exemplo de cURL: curl -X POST -H "Content-Type: application/json" -d '{"name": "Department A"}' http://localhost:8000/api/departments/
 
-    Remover departamento por nome:
+    Remover departamento por id:
         Método: DELETE
-        Endpoint: /api/departments/{department_name}/
-        Exemplo de cURL: curl -X DELETE http://localhost:8000/api/departments/{department_name}/
+        Endpoint: /api/departments/{department_id}/
+        Exemplo de cURL: curl -X DELETE http://localhost:8000/api/departments/{department_id}/
 
 Website Público -> http://localhost:8000/employees/: Visualize uma tabela simples listando todos os colaboradores e seus respectivos departamentos.
 
