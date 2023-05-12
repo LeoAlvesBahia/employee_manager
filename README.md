@@ -11,7 +11,7 @@ O "IGS Employee Manager" é um aplicativo web desenvolvido em Django para gerenc
 
 1. Clone o repositório:
     ```bash
-        git clone https://github.com/seu-usuario/igs-employee-manager.git
+        git clone https://github.com/LeoAlvesBahia/employee_manager.git
     ```
 2. Crie e ative um ambiente virtual:
     ```bash
