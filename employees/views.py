@@ -80,10 +80,7 @@ def api_department(request, department_name=None):
         return JsonResponse({'message': 'Department created successfully', 'department_id': department.id})
     elif request.method == 'DELETE':
         try:
-            if int(department_name):
-                department = Department.objects.get(id=department_name)
-            else:
-                department = Department.objects.get(name=department_name)
+            department = Department.objects.get(id=department_name)
             department.delete()
             return JsonResponse({'message': 'Department deleted successfully'}, status=204)
         except Department.DoesNotExist:
