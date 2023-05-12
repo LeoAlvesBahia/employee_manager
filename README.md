@@ -1,6 +1,3 @@
-```markdown
-
-
 # IGS Employee Manager
 
 O "IGS Employee Manager" é um aplicativo web desenvolvido em Django para gerenciar informações de colaboradores, como nome, endereço de e-mail e departamento. Ele possui um painel administrativo, uma API para integrações e um site público para visualização dos detalhes dos colaboradores.
@@ -34,8 +31,6 @@ O "IGS Employee Manager" é um aplicativo web desenvolvido em Django para gerenc
         python manage.py runserver
     ```
 6. Acesso o aplicativo em seu navegador pelo endereço `http://localhost:8000`.
-
-```
 
 ## Funcionalidades
 
