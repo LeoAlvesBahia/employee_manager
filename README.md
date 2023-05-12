@@ -34,31 +34,38 @@ Painel Administrativo -> http://localhost:8000/admin: Acesse o painel administra
 
 API:
 
-    Listar Colaboradores:
+    Listar colaboradores:
         Método: GET
         Endpoint: /api/employees/
+        Exemplo de cURL: curl -X GET http://localhost:8000/api/employees/
 
-    Adicionar Colaborador:
+    Adicionar colaborador:
         Método: POST
         Endpoint: /api/employees/
         Corpo da Requisição: JSON contendo os dados do colaborador
+        Exemplo de cURL: curl -X POST -H "Content-Type: application/json" -d '{"name": "John Doe", "email": "johndoe@example.com", "department": "Department A"}' http://localhost:8000/api/employees/
 
-    Remover Colaborador:
+    Remover colaborador por ID:
         Método: DELETE
-        Endpoint: /api/employees/{employee_id}/
+        Endpoint: /api/employees/
+        Corpo da Requisição: JSON contendo o ID do colaborador a ser removido
+        Exemplo de cURL: curl -X DELETE http://localhost:8000/api/employees/{employee_id}/
 
-    Listar Departamentos:
+    Listar departamentos:
         Método: GET
         Endpoint: /api/departments/
+        Exemplo de cURL: curl -X GET http://localhost:8000/api/departments/
 
-    Adicionar Departamento:
+    Adicionar departamento:
         Método: POST
         Endpoint: /api/departments/
         Corpo da Requisição: JSON contendo os dados do departamento
+        Exemplo de cURL: curl -X POST -H "Content-Type: application/json" -d '{"name": "Department A"}' http://localhost:8000/api/departments/
 
-    Remover Departamento:
+    Remover departamento por nome:
         Método: DELETE
-        Endpoint: /api/departments/{department_id}/
+        Endpoint: /api/departments/{department_name}/
+        Exemplo de cURL: curl -X DELETE http://localhost:8000/api/departments/{department_name}/
 
 Website Público -> http://localhost:8000/employees/: Visualize uma tabela simples listando todos os colaboradores e seus respectivos departamentos.
 
