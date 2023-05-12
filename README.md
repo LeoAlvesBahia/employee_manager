@@ -61,7 +61,7 @@ API:
         Corpo da Requisição: JSON contendo os dados do departamento
 
     Remover Departamento:
-        Método: DELETEgit 
+        Método: DELETE
         Endpoint: /api/departments/{department_id}/
 
 Website Público -> http://localhost:8000/employees/: Visualize uma tabela simples listando todos os colaboradores e seus respectivos departamentos.
