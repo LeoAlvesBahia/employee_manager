@@ -34,7 +34,7 @@ O "IGS Employee Manager" é um aplicativo web desenvolvido em Django para gerenc
 
 ## Funcionalidades
 
-Painel Administrativo: Acesse o painel administrativo do Django para gerenciar os dados dos colaboradores e departamentos.
+Painel Administrativo -> http://localhost:8000/admin: Acesse o painel administrativo do Django para gerenciar os dados dos colaboradores e departamentos. 
 
 API:
 
@@ -64,7 +64,7 @@ API:
         Método: DELETE
         Endpoint: /api/departments/{department_id}/
 
-Website Público: Visualize uma tabela simples listando todos os colaboradores e seus respectivos departamentos.
+Website Público -> http://localhost:8000/employees/: Visualize uma tabela simples listando todos os colaboradores e seus respectivos departamentos.
 
 ## Licença
 
