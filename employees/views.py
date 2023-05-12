@@ -49,5 +49,4 @@ def api_employees(request):
 
 def public_employees(request):
     employees = Employee.objects.all()
-    return render(request, 'employees/employee_list.html',
-                  {'employees': employees})
+    return render(request, 'employee_list.html', {'employees': employees})
