@@ -30,12 +30,14 @@ def api_employees(request):
         try:
             department = Department.objects.get(id=department_id)
         except Department.DoesNotExist:
-            return JsonResponse({'error': 'Department does not exist'}, status=400)
+            return JsonResponse({'error': 'Department does not exist'},
+                                status=400)
 
         employee = Employee(name=name, email=email, department=department)
         employee.save()
 
-        return JsonResponse({'message': 'Employee added successfully'}, status=201)
+        return JsonResponse({'message': 'Employee added successfully'},
+                            status=201)
     elif request.method == 'DELETE':
         data = json.loads(request.body)
         employee_id = data.get('id')
@@ -43,12 +45,13 @@ def api_employees(request):
         try:
             employee = Employee.objects.get(id=employee_id)
         except Employee.DoesNotExist:
-            return JsonResponse({'error': 'Employee does not exist'}, status=404)
+            return JsonResponse({'error': 'Employee does not exist'},
+                                status=404)
 
         employee.delete()
 
-        return JsonResponse({'message': 'Employee deleted successfully'}, status=204)
-
+        return JsonResponse({'message': 'Employee deleted successfully'},
+                            status=204)
 
 
 def public_employees(request):
@@ -73,17 +76,21 @@ def api_department(request, department_name=None):
         name = data.get('name')
 
         if not name:
-            return JsonResponse({'error': 'Department name is required'}, status=400)
+            return JsonResponse({'error': 'Department name is required'},
+                                status=400)
 
         department = Department.objects.create(name=name)
 
-        return JsonResponse({'message': 'Department created successfully', 'department_id': department.id})
+        return JsonResponse({'message': 'Department created successfully',
+                             'department_id': department.id})
     elif request.method == 'DELETE':
         try:
             department = Department.objects.get(id=department_name)
             department.delete()
-            return JsonResponse({'message': 'Department deleted successfully'}, status=204)
+            return JsonResponse({'message': 'Department deleted successfully'},
+                                status=204)
         except Department.DoesNotExist:
-            return JsonResponse({'error': 'Department does not exist'}, status=404)
+            return JsonResponse({'error': 'Department does not exist'},
+                                status=404)
     else:
         return JsonResponse({'error': 'Invalid request method'}, status=405)
